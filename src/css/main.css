@@ -99,10 +99,24 @@ div#intro {
     width: 66%;
 }
 
+div#coms {
+    float: left;
+    margin: 0px auto;
+    width: 15em;
+}
 
+/* 
+ * List styling
+ */
 
+ul {
+    list-style-type: none;
+}
 
-
+li {
+    margin: 0 auto;
+    padding: 0.2em;
+}
 
 /* ==========================================================================
    Helper classes
