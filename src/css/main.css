@@ -88,16 +88,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+div.content-box {
+    margin: 0px auto;
+    width: 90%;
+}
 
-
-
-
-
-
-
-
-
-
+div#intro {
+    float: left;
+    padding: 0 1.5em;
+    width: 66%;
+}
 
 
 
