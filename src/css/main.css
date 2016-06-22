@@ -95,13 +95,15 @@ div.content-box {
 
 div#intro {
     float: left;
-    padding: 0 1.5em;
+    margin: 0px auto;
+    padding: 0 0.75em;
     width: 66%;
 }
 
 div#coms {
     float: left;
     margin: 0px auto;
+    padding: 0 0.75em;
     width: 15em;
 }
 
