@@ -105,6 +105,31 @@ div#coms {
     width: 15em;
 }
 
+/*
+ * Fonts
+ */
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h2 {
+    font-family: 'Alegreya', serif;
+}
+
+a:link {
+    font-family: 'Anonymous Pro', monospace;
+    color: #000000;
+}
+
+a:visited {
+    color: #000000;
+}
+
 /* 
  * List styling
  */
