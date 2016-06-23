@@ -156,6 +156,10 @@ a:visited {
     color: #000000;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /* 
  * List styling
  */
