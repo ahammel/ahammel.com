@@ -93,6 +93,30 @@ div.content-box {
     width: 90%;
 }
 
+div.page-header {
+    margin: 0px auto;
+    width: 100%;
+}
+
+div#page-title {
+    float: left;
+    margin: 0px auto;
+    padding: 0 1.5em;
+}
+
+div#portrait-box {
+    float: right;
+    padding: 0 3em;
+    overflow: hidden;
+}
+
+img.portrait {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
 div#intro {
     float: left;
     margin: 0px auto;
