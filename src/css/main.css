@@ -131,6 +131,13 @@ div#coms {
     width: 15em;
 }
 
+div.footer{
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 /*
  * Fonts
  */
