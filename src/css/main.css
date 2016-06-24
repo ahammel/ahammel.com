@@ -110,11 +110,11 @@ div#portrait-box {
     overflow: hidden;
 }
 
-img.portrait {
+img#portrait {
+    width: 150px;
+    height: auto;
     display: inline;
     margin: 0 auto;
-    height: 100%;
-    width: auto;
 }
 
 div#intro {
