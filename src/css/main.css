@@ -88,15 +88,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-div.content-box {
-    margin: 0px auto;
-    width: 90%;
+div.wrapper {
+    margin: 0 auto -30px;
 }
 
 div.page-header {
     margin: 0px auto;
     width: 100%;
 }
+
+div.content-box {
+    margin: 0px auto;
+    width: 90%;
+    padding-bottom: 100px;
+}
+
+div.push, div.footer{
+    height: 30px;
+    clear: both;
+}
+
 
 div#page-title {
     float: left;
@@ -131,11 +142,9 @@ div#coms {
     width: 15em;
 }
 
-div.footer{
-    height: 30px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+div#github-link-box {
+    float: right;
+    padding-right: 2em;
 }
 
 /*
