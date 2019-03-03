@@ -147,6 +147,11 @@ div#github-link-box {
     padding-right: 2em;
 }
 
+.c-logo {
+    width: 30px;
+    height: 30px;
+}
+
 /*
  * Fonts
  */
