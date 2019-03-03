@@ -10,10 +10,40 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Open+Sans:300|Roboto+Slab:100|Alegreya:700" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            function onRequestEmail() {
+                const clientId = grecaptcha.render('g-recaptcha-badge', {
+                    'sitekey': '6LcLepMUAAAAAJHqlSuTYE2X9yBZvihR3iCCHKg8',
+                    'badge': 'inline',
+                    'size': 'invisible'
+                });
+
+                grecaptcha.ready(() => {
+                    grecaptcha.execute(clientId, {action: "homepage"})
+                        .then((token) => {
+                            const form = new FormData();
+                            form.append("g-recaptcha-response", token);
+
+                            $.post(
+                                "https://mailhide.ahammel.com/mailhide-go",
+                                new URLSearchParams(form).toString(),
+                                (response) => {
+                                    if (response.success) {
+                                        const email = response.secret;
+                                        const element = `<a href="mailto:${email}">${email}</a>`;
+                                        $(".email-hidden").replaceWith(element)
+                                    }
+                                }
+                            );
+                        });
+                });
+            }
+        </script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -54,19 +84,19 @@
                     <h2>coms</h2>
                     <p>These are all pretty good ways to contact me:</p>
                     <ul>
-                        <li>
+                        <li class="c-comms__li">
                             <img src="img/twitter-square-logo.png" width=30 height=30>
                             <a href="https://twitter.com/alexjhammel">twitter</a>
                         </li>
-                        <li>
+                        <li class="c-comms__li">
                             <img src="img/at_sign-512.png" width=30 height=30>
-                            <a href="email_invisible.html" onclick="window.open('email_invisible.html', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">email</a>
+                            <a class="email-hidden" onclick="onRequestEmail()">email</a>
                         </li>
-                        <li>
+                        <li class="c-comms__li">
                             <img src="img/github-512.png" width=30 height=30>
                             <a href="https://github.com/ahammel">github</a>
                         </li>
-                        <li>
+                        <li class="c-comms__li">
                             <img src="img/linkedin.png" width=30 height=30>
                             <a href="https://www.linkedin.com/in/alexhammel">linkedin</a>
                         </li>
@@ -86,5 +116,6 @@
                 </small>
             </div>
         </div>
+        <div id="g-recaptcha-badge"></div>
     </body>
 </html>

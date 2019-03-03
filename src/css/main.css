@@ -176,7 +176,22 @@ a:hover {
     text-decoration: none;
 }
 
-/* 
+.email-hidden {
+    font-family: 'Anonymous Pro', monospace;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.email-hidden:hover {
+    text-decoration: none;
+}
+
+.c-comms__li {
+    white-space: nowrap;
+}
+
+/*
  * List styling
  */
 
