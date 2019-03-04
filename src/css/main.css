@@ -135,6 +135,14 @@ img#portrait {
     width: 66%;
 }
 
+.c-projects-list {
+    padding-left: 0;
+}
+
+.c-projects-list__item {
+    padding-left: 0;
+}
+
 .c-content-right {
     float: left;
     margin: 0px auto;
